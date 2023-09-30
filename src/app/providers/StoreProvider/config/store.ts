@@ -1,9 +1,13 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit"
+import { wordReducer } from "entities/Word/model/slice/word.slice"
+import { wordsReducer } from "entities/Word/model/slice/words.slice"
 import { useDispatch } from 'react-redux'
 
 const makeStore = () => {
     return configureStore({
         reducer: {
+            word: wordReducer,
+            words: wordsReducer
         }
     })
 }

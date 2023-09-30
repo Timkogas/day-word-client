@@ -1,5 +1,5 @@
 import { StoreProvider } from './ui/StoreProvider';
-import { AppDispatch } from './config/store';
+import { AppDispatch, AppState } from './config/store';
 import createAppAsyncThunk from './config/store';
 
 export {
@@ -9,4 +9,5 @@ export {
 
 export type {
     AppDispatch,
+    AppState
 };

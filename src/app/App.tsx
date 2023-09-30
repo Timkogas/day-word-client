@@ -1,7 +1,8 @@
 import classNames from 'classnames';
 import { Suspense } from 'react'
 import { AppRouter } from './providers/router';
-import Header from 'widgets/Header/ui/Header';
+import { Header } from 'widgets/Header';
+
 
 function App() {
 

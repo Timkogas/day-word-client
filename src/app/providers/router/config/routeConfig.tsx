@@ -1,4 +1,5 @@
-import { MainPage } from 'pages/MainPage';
+
+import { WordsPage } from 'pages/WordsPage';
 import { NotFoundPage } from 'pages/NotFoundPage';
 import {
     AppRoutes,
@@ -9,7 +10,7 @@ import {
 export const routeConfig: Record<AppRoutes, {path: string, element: JSX.Element}> = {
     [AppRoutes.MAIN]: {
         path: getRouteMain(),
-        element: <MainPage />,
+        element: <WordsPage />,
     },
     // last
     [AppRoutes.NOT_FOUND]: {

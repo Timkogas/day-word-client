@@ -1,0 +1,16 @@
+.WordItem {
+    border-radius: 16px;
+
+    background-color: var(--bg-dark-color);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+    padding: 20px;
+
+    width: 320px;
+    height: 100%;
+}
+
+.description {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}

@@ -2,10 +2,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    padding: 20px 0;
+    background-color: var(--bg-dark-color);
+    height:var(--header-height);
 
     gap: 10px;
 
-    border-bottom: 1px solid var(--bg-inverted-color);
+    border-bottom: 1px solid var(--bg-light-color);
 }
