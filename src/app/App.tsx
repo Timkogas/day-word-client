@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import { Suspense } from 'react'
 import { AppRouter } from './providers/router';
+import Header from 'widgets/Header/ui/Header';
 
 function App() {
 
@@ -8,9 +9,8 @@ function App() {
 
     <div className={classNames('app')}>
           <Suspense fallback=''>
-
+              <Header/>
               <div className='content-page'>
-
                   <AppRouter />
               </div>
           </Suspense>
