@@ -1,7 +1,9 @@
 import classNames from 'classnames';
 import { Suspense } from 'react'
 import { AppRouter } from './providers/router';
-import Header from 'widgets/Header/ui/Header';
+import { Header } from 'widgets/Header';
+import { Navbar } from 'widgets/Navbar';
+
 
 function App() {
 
@@ -13,6 +15,7 @@ function App() {
               <div className='content-page'>
                   <AppRouter />
               </div>
+              <Navbar/>
           </Suspense>
       </div>
 

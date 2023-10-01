@@ -8,6 +8,6 @@ interface StoreProviderProps {
 
 export const StoreProvider = (props: StoreProviderProps) => {
     const { children } = props;
-    console.log('render store')
+
     return <Provider store={store}>{children}</Provider>;
 };

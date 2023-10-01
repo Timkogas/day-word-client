@@ -3,6 +3,11 @@
 @import "themes/light";
 @import "themes/dark";
 
+html,
+body {
+    height: 100%;
+}
+
 .app,
 .app_modal {
     font: var(--font-m);
@@ -15,10 +20,15 @@
 }
 
 .content-page {
-    display: flex;
+    padding-top: 15px;
+    height: calc(100vh - var(--header-height) - var(--navbar-height));
 }
 
-.page-wrapper {
-    flex-grow: 1;
-    padding: 20px;
+.slick-list, .slick-track, .slick-slide {
+    height: 100% !important;
 }
+
+.slick-slide > div {
+    height: 100% !important;
+}
+
