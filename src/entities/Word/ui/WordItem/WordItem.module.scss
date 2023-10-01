@@ -6,8 +6,8 @@
 
     padding: 20px;
 
-    max-width: 320px;
-    height: 100%;
+    max-width: var(--word-item-width);
+    height:95%;
 }
 
 .description {

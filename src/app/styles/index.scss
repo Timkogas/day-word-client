@@ -2,9 +2,12 @@
 @import "variables/global";
 @import "themes/light";
 @import "themes/dark";
-html, body {
+
+html,
+body {
     height: 100%;
 }
+
 .app,
 .app_modal {
     font: var(--font-m);
@@ -17,6 +20,15 @@ html, body {
 }
 
 .content-page {
-    padding: 15px;
+    padding-top: 15px;
     height: calc(100vh - var(--header-height) - var(--navbar-height));
 }
+
+.slick-list, .slick-track, .slick-slide {
+    height: 100% !important;
+}
+
+.slick-slide > div {
+    height: 100% !important;
+}
+

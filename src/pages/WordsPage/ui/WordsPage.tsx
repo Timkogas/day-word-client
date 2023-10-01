@@ -1,5 +1,4 @@
-import { getWordsSelector } from 'entities/Word';
-import WordsList from 'entities/Word/ui/WordsList/WordsList'
+import { WordsList, getWordsSelector } from 'entities/Word';
 import type { FC } from 'react'
 import { useSelector } from 'react-redux';
 import cls from './WordsPage.module.scss'

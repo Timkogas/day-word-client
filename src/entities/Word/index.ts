@@ -1,7 +1,7 @@
 import { getWordsSelector } from "./model/selectors/wordsSelector";
 import { WordSchema } from "./model/types/wordSchema";
-import WordItem from "./ui/WordItem/WordItem";
+import { WordsList } from "./ui/WordsList/WordsList";
 
 export type { WordSchema }
 
-export { WordItem, getWordsSelector }
+export { WordsList, getWordsSelector }
