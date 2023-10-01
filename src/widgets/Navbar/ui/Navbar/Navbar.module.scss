@@ -1,0 +1,23 @@
+.Navbar {
+    height: var(--navbar-height);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; 
+
+    position: relative;
+}
+
+.link {
+    z-index: 1;
+}
+
+.activeWords {
+    transform: translate(-64%, -10%);
+}
+
+.activeProfile {
+    transform: translate(65%, -10%);
+}
+
