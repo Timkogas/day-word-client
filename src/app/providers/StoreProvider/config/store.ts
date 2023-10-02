@@ -1,4 +1,5 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit"
+import { userReducer } from "entities/User"
 import { wordReducer } from "entities/Word"
 import { wordsReducer } from "entities/Word"
 import { vkBridgeReducer } from "entities/vkBridge"
@@ -9,7 +10,8 @@ const makeStore = () => {
         reducer: {
             word: wordReducer,
             words: wordsReducer,
-            vkBridge: vkBridgeReducer
+            vkBridge: vkBridgeReducer,
+            user: userReducer
         }
     })
 }

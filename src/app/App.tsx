@@ -6,16 +6,25 @@ import { Navbar } from 'widgets/Navbar';
 import { useAppDispatch } from './providers/StoreProvider/config/store';
 import { getVkBridgeLaunchParamsSelector, getVkBridgeLaunchParamsThunk } from 'entities/vkBridge';
 import { useSelector } from 'react-redux';
+import { checkUserThunk, getUserSelector } from 'entities/User';
 
 
 function App() {
 
   const dispatch = useAppDispatch()
   const launchParams = useSelector(getVkBridgeLaunchParamsSelector)
+  const user = useSelector(getUserSelector)
+  console.log(user)
 
   useEffect(() => {
     dispatch(getVkBridgeLaunchParamsThunk())
   }, [dispatch])
+
+  useEffect(() => {
+    if (launchParams?.vk_user_id) {
+      dispatch(checkUserThunk(launchParams?.vk_user_id))
+    }
+  }, [launchParams?.vk_user_id, dispatch])
 
   return (
 

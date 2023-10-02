@@ -1,4 +1,4 @@
-import { getWordsSelector } from "./model/selector/wordsSelectors";
+import { getWordsSelector } from "./model/selectors/wordsSelectors";
 import { wordReducer } from "./model/slice/word.slice";
 import { wordsReducer } from "./model/slice/words.slice";
 import { WordSchema } from "./model/types/wordSchema";

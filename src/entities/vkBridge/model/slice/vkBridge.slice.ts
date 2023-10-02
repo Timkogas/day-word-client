@@ -1,6 +1,6 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import { VkBridgeSchema } from '../types/vkBridgeSchema';
-import { getVkBridgeLaunchParamsThunk } from '../services/getLaunchParams';
+import { getVkBridgeLaunchParamsThunk } from '../services/vkBridgeThunks';
 import { GetLaunchParamsResponse } from '@vkontakte/vk-bridge';
 
 const initialState: VkBridgeSchema = {};
