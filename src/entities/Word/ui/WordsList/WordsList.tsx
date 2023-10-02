@@ -1,14 +1,14 @@
 import { memo, useMemo, type FC } from 'react'
 import cls from './WordsList.module.scss'
-import { IWord } from '../../model/types/word'
 import WordItem from '../WordItem/WordItem'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { IDay } from '../../model/types/day';
 
 interface WordsListProps {
     className?: string
-    words: IWord[]
+    words: IDay[]
 }
 
 export const WordsList: FC<WordsListProps> = memo((props: WordsListProps) => {
@@ -24,8 +24,8 @@ export const WordsList: FC<WordsListProps> = memo((props: WordsListProps) => {
     };
 
     const wordsBlocks = useMemo(() => {
-        return words.map((word) => {
-            return (<WordItem word = { word } key = { word.id } />)
+        return words?.map((word) => {
+            return (<WordItem word = { word.words } key = { word.words.id } />)
         })
     }, [words])
 

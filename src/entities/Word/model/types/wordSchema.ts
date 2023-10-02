@@ -1,8 +1,7 @@
-import { IWord } from "./word";
-
+import { IDay } from "./day";
 
 export interface WordSchema {
     isLoading: boolean;
     error?: string;
-    data?: IWord;
+    words: IDay[]
 }

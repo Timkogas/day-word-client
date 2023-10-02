@@ -1,10 +1,11 @@
 import { StoreProvider } from './ui/StoreProvider';
-import { AppDispatch, AppState } from './config/store';
+import { AppDispatch, AppState, useAppDispatch } from './config/store';
 import { createAppAsyncThunk } from './config/createAppAsyncThunk';
 
 export {
     StoreProvider,
-    createAppAsyncThunk
+    createAppAsyncThunk,
+    useAppDispatch
 };
 
 export type {
