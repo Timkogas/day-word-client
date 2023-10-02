@@ -14,10 +14,15 @@
 }
 
 .activeWords {
-    transform: translate(-64%, -10%);
+    transform: translate(-130%, -10%);
+}
+
+.activeFavorites {
+    transform: translate(-1%, -10%);
 }
 
 .activeProfile {
-    transform: translate(65%, -10%);
+    transform: translate(130%, -10%);
 }
+
 
