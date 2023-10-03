@@ -11,7 +11,7 @@ bridge.send("VKWebAppInit");
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <StoreProvider>
-        <BrowserRouter>
+        <BrowserRouter basename={'/day-word-client/'}>
             <ErrorBoundary>
                 <ThemeProvider>
                     <App />
