@@ -1,0 +1,10 @@
+@import '../../../app/styles/mixins.scss';
+
+.avatar {
+    width: 150px;
+    height: 150px;
+
+    border-radius: 100%;
+
+    @include none-select;
+}
