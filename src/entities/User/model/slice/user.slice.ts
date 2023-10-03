@@ -2,6 +2,7 @@ import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import { UserSchema } from '../types/userSchema';
 import { checkUserThunk } from '../services/userThunks';
 import ResponseApi from 'shared/types/api';
+import { IUser } from '../types/user';
 
 const initialState: UserSchema = {};
 
@@ -12,9 +13,9 @@ export const userSlice = createSlice({
     extraReducers: (builder) => {
         builder.addCase(
             checkUserThunk.fulfilled,
-            (state, { payload }: PayloadAction<ResponseApi | undefined>) => {
+            (state, { payload }: PayloadAction<ResponseApi<IUser> | undefined>) => {
                 if (payload !== undefined) {
-                    state.data = payload.result
+                    state.user = payload.result
                 }
             },
         );

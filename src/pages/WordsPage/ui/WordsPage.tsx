@@ -8,15 +8,15 @@ import { useAppDispatch } from 'app/providers/StoreProvider';
 const WordsPage: FC = () => {
   const dispatch = useAppDispatch()
 
-  const words = useSelector(getLastWordsSelector);
-  console.log(words)
+  const list = useSelector(getLastWordsSelector);
+
   useEffect(() => {
     dispatch(getLastWordsThunk())
   }, [dispatch])
 
   return (
     <div className={cls.WordsPage}>
-      <WordsList words={words} />
+      <WordsList list={list} />
     </div>
   )
 }

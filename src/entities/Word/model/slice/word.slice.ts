@@ -2,6 +2,7 @@ import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import { WordSchema } from '../types/wordSchema';
 import { getLastWordsThunk } from '../services/wordsThunks';
 import ResponseApi from 'shared/types/api';
+import { IDay } from '../types/day';
 
 
 const initialState: WordSchema = {
@@ -17,7 +18,7 @@ export const wordSlice = createSlice({
     extraReducers: (builder) => {
         builder.addCase(
             getLastWordsThunk.fulfilled,
-            (state, { payload }: PayloadAction<ResponseApi | undefined>) => {
+            (state, { payload }: PayloadAction<ResponseApi<IDay[]> | undefined>) => {
                 if (payload !== undefined) {
                     state.words = payload.result
                 }

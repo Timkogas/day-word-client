@@ -8,11 +8,11 @@ import { IDay } from '../../model/types/day';
 
 interface WordsListProps {
     className?: string
-    words: IDay[]
+    list: IDay[]
 }
 
 export const WordsList: FC<WordsListProps> = memo((props: WordsListProps) => {
-    const { words } = props
+    const { list } = props
 
 
     const settings = {
@@ -24,10 +24,10 @@ export const WordsList: FC<WordsListProps> = memo((props: WordsListProps) => {
     };
 
     const wordsBlocks = useMemo(() => {
-        return words?.map((word) => {
-            return (<WordItem word = { word.words } key = { word.words.id } />)
+        return list?.map((day) => {
+            return (<WordItem word = { day.word } key = { day.word.id } />)
         })
-    }, [words])
+    }, [list])
 
     return (
         <Slider {...settings} className={cls.slider}>

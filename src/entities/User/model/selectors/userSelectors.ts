@@ -1,4 +1,4 @@
 import { AppState } from "app/providers/StoreProvider";
 
 export const getUserSelector = (state: AppState) =>
-    state.user?.data;
+    state.user?.user;
