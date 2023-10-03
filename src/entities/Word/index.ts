@@ -1,7 +1,9 @@
-import { getWordsSelector } from "./model/selectors/wordsSelector";
+import { getLastWordsSelector } from "./model/selectors/wordSelectors";
+import { getLastWordsThunk } from "./model/services/wordsThunks";
+import { wordReducer } from "./model/slice/word.slice";
 import { WordSchema } from "./model/types/wordSchema";
 import { WordsList } from "./ui/WordsList/WordsList";
 
 export type { WordSchema }
 
-export { WordsList, getWordsSelector }
+export { WordsList, getLastWordsSelector, wordReducer,getLastWordsThunk }

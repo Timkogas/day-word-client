@@ -4,6 +4,8 @@ export interface IWord {
     description: string;
     example: string;
     type: ETypeWord;
+    created_at: Date;
+    updated_at: Date;
 }
 
 export enum ETypeWord {

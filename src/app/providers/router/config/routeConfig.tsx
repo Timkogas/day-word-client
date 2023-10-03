@@ -5,7 +5,10 @@ import {
     AppRoutes,
     getRouteWords,
     getRouteProfile,
+    getRouteFavorites,
 } from 'shared/const/router';
+import { ProfilePage } from 'pages/ProfilePage';
+import { FavoritesPage } from 'pages/FavoritesPage';
 
 
 export const routeConfig: Record<AppRoutes, {path: string, element: JSX.Element}> = {
@@ -15,7 +18,11 @@ export const routeConfig: Record<AppRoutes, {path: string, element: JSX.Element}
     },
     [AppRoutes.PROFILE]: {
         path: getRouteProfile(),
-        element: <NotFoundPage />,
+        element: <ProfilePage />,
+    },
+    [AppRoutes.FAVORITES]: {
+        path: getRouteFavorites(),
+        element: <FavoritesPage />,
     },
     // last
     [AppRoutes.NOT_FOUND]: {
