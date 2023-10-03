@@ -8,7 +8,7 @@ import { IDay } from '../types/day';
 const initialState: WordSchema = {
     isLoading: false,
     error: undefined,
-    words: [],
+    days: [],
 };
 
 export const wordSlice = createSlice({
@@ -20,7 +20,7 @@ export const wordSlice = createSlice({
             getLastWordsThunk.fulfilled,
             (state, { payload }: PayloadAction<ResponseApi<IDay[]> | undefined>) => {
                 if (payload !== undefined) {
-                    state.words = payload.result
+                    state.days = payload.result
                 }
             },
         );
