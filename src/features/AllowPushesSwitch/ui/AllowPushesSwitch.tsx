@@ -1,5 +1,4 @@
 import { memo, type FC, useCallback } from 'react'
-import cls from './AllowPushesSwitch.module.scss'
 import { Switch } from 'shared/ui/Switch'
 import { useSelector } from 'react-redux'
 import { allowNotificationsThunk, denyNotificationsThunk, getVkBridgeNotificationsIsAllowedSelector } from 'entities/vkBridge'
