@@ -8,7 +8,7 @@ import { useAppDispatch } from 'app/providers/StoreProvider';
 const WordsPage: FC = () => {
   const dispatch = useAppDispatch()
 
-  const list = useSelector(getLastWordsSelector);
+  const days = useSelector(getLastWordsSelector);
 
   useEffect(() => {
     dispatch(getLastWordsThunk())
@@ -16,7 +16,7 @@ const WordsPage: FC = () => {
 
   return (
     <div className={cls.WordsPage}>
-      <WordsList list={list} />
+      <WordsList days={days} />
     </div>
   )
 }

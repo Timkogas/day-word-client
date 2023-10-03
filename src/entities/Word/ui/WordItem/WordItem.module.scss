@@ -5,12 +5,38 @@
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 
     padding: 20px;
+    padding-bottom: 60px;
 
-    max-width: var(--word-item-width);
-    height:95%;
+    max-width: 380px;
+    height: 95%;
+
+    position: relative;
+}
+
+.content {
+    height: 100%;
+    overflow: auto;
+
+
+    &::-webkit-scrollbar {
+        width: 0;
+    }
 }
 
 .description {
     margin-top: 20px;
     margin-bottom: 10px;
+}
+
+.favorite_icon {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+
+    cursor: pointer;
+
+    &:hover * {
+        fill: var(--primary-color);
+        color: var(--primary-color)
+    }
 }
