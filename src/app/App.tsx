@@ -20,7 +20,7 @@ function App() {
 
   useEffect(() => {
     if (launchParams?.vk_user_id) {
-      dispatch(checkUserThunk(launchParams?.vk_user_id))
+      dispatch(checkUserThunk())
     }
   }, [launchParams?.vk_user_id, dispatch])
 

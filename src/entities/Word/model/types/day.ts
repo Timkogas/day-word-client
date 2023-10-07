@@ -8,8 +8,3 @@ export interface IDay {
     created_at: Date;
     updated_at: Date;
 }
-
-export interface IRequestAddWordToFavorite {
-    uid: number;
-    word_id: number;
-}

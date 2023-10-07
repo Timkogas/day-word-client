@@ -1,6 +1,6 @@
 import { instance } from "shared/api/api"
 import ResponseApi from "shared/types/api"
-import { IDay, IRequestAddWordToFavorite } from "../model/types/day"
+import { IDay } from "../model/types/day"
 
 class WordApi {
     public getLastWords = async (): Promise<ResponseApi<IDay[]> | undefined> => {
@@ -12,10 +12,9 @@ class WordApi {
         }
     }
 
-    public addWordToFavorite = async ({ uid, word_id }: IRequestAddWordToFavorite): Promise<ResponseApi<IDay[]> | undefined> => {
+    public addWordToFavorite = async (word_id: number): Promise<ResponseApi<IDay[]> | undefined> => {
         try {
             const response = await instance.post(`favorites`, {
-                uid: uid.toString(),
                 word_id: word_id
             })
             return response.data
