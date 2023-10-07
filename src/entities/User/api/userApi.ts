@@ -5,9 +5,9 @@ import bridge, { UserInfo } from "@vkontakte/vk-bridge"
 
 
 class UserApi {
-    public check = async (uid: number): Promise<ResponseApi<IUser> | undefined> => {
+    public check = async (): Promise<ResponseApi<IUser> | undefined> => {
         try {
-            const response = await instance.post(`users`, { uid: uid.toString() })
+            const response = await instance.post(`users`)
             return response.data
         } catch (error) {
             console.log(error)
