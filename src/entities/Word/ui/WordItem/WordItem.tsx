@@ -8,15 +8,16 @@ import { Icon } from 'shared/ui/Icon'
 interface WordItemProps {
     className?: string
     word: IWord
+    date: Date
 }
 
 export const WordItem: FC<WordItemProps> = memo((props: WordItemProps) => {
-    const { word } = props
-
+    const { word, date } = props
 
     return (
         <div className={cls.WordItem}>
             <div className={cls.content}>
+                <Text text={new Date(date).toLocaleDateString()} className={cls.date}  size={TextSize.S} />
                 <Text title={word.word} size={TextSize.L} />
                 <Text text={word.type} size={TextSize.M} />
                 <Text title={word.description} size={TextSize.M} className={cls.description} />

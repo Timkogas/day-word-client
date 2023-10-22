@@ -14,16 +14,19 @@ interface WordsListProps {
 export const WordsList: FC<WordsListProps> = memo((props: WordsListProps) => {
     const { days } = props
 
-
     const settings = {
         speed: 500,
-        slidesToShow: 3,
+        slidesToShow: 1,
         slidesToScroll: 1,
+        infinite: false,
+        centerMode: true,
+        initialSlide: 10000,
+        centerPadding: '230px'
     };
 
     const wordsBlocks = useMemo(() => {
         return days?.map((day) => {
-            return (<WordItem word = { day.word } key = { day.word.id } />)
+            return (<WordItem date={day.day} word={day.word} key={day.word.id} />)
         })
     }, [days])
 
